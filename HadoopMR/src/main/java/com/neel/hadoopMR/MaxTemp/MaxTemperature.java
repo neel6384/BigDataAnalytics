@@ -1,4 +1,4 @@
-package com.neel.hadoop.HadoopMR.MaxTemp;
+package com.neel.hadoopMR.MaxTemp;
 
 
 import org.apache.hadoop.conf.Configuration;
