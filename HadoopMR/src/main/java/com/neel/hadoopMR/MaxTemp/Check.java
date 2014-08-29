@@ -20,6 +20,7 @@ public class Check {
 			String tm  = line.substring(13,19);
 			System.out.println(year + ">>"+ tm);
 		}
+		reader.close();
 	}
 
 }
