@@ -35,7 +35,7 @@ public class MatrixMultiply {
 	        job.setReducerClass(MatrixReducer.class);
 	 
 	        job.setInputFormatClass(TextInputFormat.class);
-	        job.setOutputFormatClass(SequenceFileOutputFormat.class);
+	        job.setOutputFormatClass(TextOutputFormat.class);
 	 
 	        FileInputFormat.addInputPath(job, new Path("hdfs://localhost:54310/Matrix/"));
 	        FileOutputFormat.setOutputPath(job, new Path("hdfs://localhost:54310/Matrix_op/"));

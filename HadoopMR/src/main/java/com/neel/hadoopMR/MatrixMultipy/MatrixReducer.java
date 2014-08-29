@@ -21,7 +21,7 @@ public class MatrixReducer extends Reducer<Text, Text, Text, FloatWritable> {
 		for (Text val : value){
 			 
 			String line[] = val.toString().split(",");
-			System.out.println(line[0] + " in reducer" + line[1] + line[2]);
+			System.out.println(line[0] + " in reducer" + line[1] + " " +line[2]);
 			
 			if(line[0].equals("file1")){
 				Map<Integer,Float> mapentry = new HashMap<Integer, Float>();
@@ -57,6 +57,7 @@ public class MatrixReducer extends Reducer<Text, Text, Text, FloatWritable> {
                          System.out.println("print b_ij" + b_jk);
               	  }
                 	key2.set(i + "," + k);
+                	  System.out.println("print a*b_ij" + a_ij*b_jk);
                     outputValue.set(a_ij*b_jk);
                     try {
 						context.write(key2, outputValue);
