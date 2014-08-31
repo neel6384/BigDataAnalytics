@@ -16,6 +16,8 @@ import org.apache.mahout.vectorizer.DictionaryVectorizer;
 import org.apache.mahout.vectorizer.DocumentProcessor;
 import org.apache.mahout.vectorizer.tfidf.TFIDFConverter;
 
+import com.neel.BigDataAnalytics.Clustering.MyAnalyzer;
+
 public class SequenceToSparseVectors {
   
   public static void main(String args[]) throws Exception {
@@ -30,7 +32,7 @@ public class SequenceToSparseVectors {
 	   // int norm = -1.0;
 	    boolean sequentialAccessOutput = true;
 	    
-	    String inputDir = "hdfs://localhost:54310/Classification/20_newgroups_seq/";
+	    String inputDir = "hdfs://localhost:54310/20_newsgroups_seq/";
         String uri = "hdfs://localhost:54310/";
 	    Configuration conf = new Configuration();
 	    FileSystem fs = FileSystem.get(URI.create(uri),conf);

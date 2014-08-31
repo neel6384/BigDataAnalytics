@@ -38,7 +38,7 @@ public class SequenceFilesFromDirectory1 extends AbstractJob {
   public static void main(String[] args) throws Exception {
 	
 	 String[] seqParams = {"--input", "hdfs://localhost:54310/20_newsgroups/",
-			 				"--output","hdfs://localhost:54310/Classification/20_newgroups_seq/"
+			 				"--output","hdfs://localhost:54310/20_newsgroups_seq/"
 			                  }; 
     ToolRunner.run(new SequenceFilesFromDirectory1(), seqParams);
   }
