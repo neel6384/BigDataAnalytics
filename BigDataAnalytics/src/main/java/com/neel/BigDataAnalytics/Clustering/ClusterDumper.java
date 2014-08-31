@@ -86,12 +86,12 @@ public final class ClusterDumper extends AbstractJob {
   }
 
   public static void main(String[] args) throws Exception {
-	String[] clusterDump = {"-i","hdfs://localhost:54310/Clustering/clusters/clusters-11-final",
+	String[] clusterDump = {"-i","hdfs://localhost:54310/Clustering/Kmeans/clusters/clusters-10-final",
 							"-o","clusterdump",
-							"-d","hdfs://localhost:54310/Clustering/dictionary.file-0",
+							"-d","hdfs://localhost:54310/Clustering/Kmeans/dictionary.file-0",
 							"-dt","sequencefile",
 							"-n","10",
-							"-of","TEXT",
+						//	"-of","TEXT",
 							"-dm","org.apache.mahout.common.distance.CosineDistanceMeasure"
 							};
     new ClusterDumper().run(clusterDump);
